@@ -1,31 +1,29 @@
 import React from 'react'
 import {
-  Box,
   Text,
   VStack,
   Grid,
   Link
 } from "@chakra-ui/react"
 import { Link as RouterLink } from "react-router-dom";
-import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
+import BoxPage from '../../components/BoxPage';
 
 export function Home() {
   return (
     <>
-      <Box textAlign="center" fontSize="xl">
+      <BoxPage fontSize="xl" textAlign="center">
         <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
 
             <Text>
-              Welcome to home
+              Bonjour Schni
             </Text>
 
             <Link as={RouterLink} to="/about">About</Link>
 
           </VStack>
         </Grid>
-      </Box>
+      </BoxPage>
     </>
   );
 }
